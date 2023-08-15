@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+    <h3 class="mb-5">{{username}}'s Account</h3>
+    <h5 class="mb-3">Change Username</h3>
+    <form action="/account" method="post" class="mb-5">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="New Username" type="text" required>
+        </div>
+        <input type="hidden" name="change" value="username">
+        <button class="btn btn-primary" type="submit">Change Username</button>
+    </form>
+
+    <h5 class="mb-3">Change Password</h3>
+    <form action="/account" method="post" class="mb-5">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="old_password" name="old_password" placeholder="Old Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="new_password" name="new_password" placeholder="New Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" required>
+        </div>
+        <input type="hidden" name="change" value="password">
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+
+    <h5 class="mb-3">Delete Account</h3>
+    <form action="/account" method="post" class="mb-5">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Confirm Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Confirm Password" type="password" required>
+        </div>
+        <input type="hidden" name="change" value="delete">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+{% endblock %}

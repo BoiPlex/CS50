@@ -1,0 +1,17 @@
+sort1 uses: Bubble sort
+
+How do you know?:
+The best case is Ω(n), which is the smallest best case time complexity of the 3.
+The real time for sorted50000.txt is 0.648s, which is the shortest time of the 3.
+
+sort2 uses: Merge sort
+
+How do you know?:
+The average case is θ(nlogn), which is the smallest average case time complexity of the 3.
+The real time for random50000.txt is 0.754s, which is the shortest time of the 3.
+
+sort3 uses: Selection sort
+
+How do you know?:
+The best case is Ω(n^2), which is the largest best case time complexity of the 3.
+The real time for sorted50000.txt is 3.487, which is the longest time of the 3.

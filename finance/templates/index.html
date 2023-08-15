@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h3 class="mb-3">Portfolio</h3>
+    <table class="table" style="empty-cells:show;">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.name }}</td>
+                    <td>{{ stock.shares }}</td>
+                    <td>{{ stock.price }}</td>
+                    <td>{{ stock.total }}</td>
+                </tr>
+            {% endfor %}
+            <!--Last rows-->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td scope="row"><b>Cash</b></td>
+                <td>{{ cash }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td scope="row"><b>TOTAL</b></td>
+                <td>{{ total }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

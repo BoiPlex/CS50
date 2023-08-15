@@ -1,0 +1,128 @@
+body {
+  background-color: lightblue;
+}
+
+h3 {
+  text-align: center;
+}
+
+.anchor-fix {
+  padding-top: 10px;
+  margin-top: -10px;
+}
+
+/*----------Nav bar----------*/
+/* Add a black background color to the top navigation */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Main content */
+.main {
+  margin-top: 100px; /* Add a top margin to avoid content overlay */
+}
+
+/* 1 line divs */
+.same-line {
+  display: inline-block;
+}
+
+/*----------Contact Me----------*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit and reset buttons with a specific background color etc */
+input[type=submit],
+input[type=reset] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*----------Footer----------*/
+.footerbar {
+  overflow: hidden;
+  background-color: #aaa;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  padding: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer-links {
+  list-style-type: none;
+}
+
+@media {
+  .footer-links li {
+    display: inline;
+  }
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover,
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding for the boxes */
+.container {
+  width: 65%;
+  border: 5px solid gray;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 100px auto;
+}
+
+/* Cool button */
+.coolButton {
+  text-align: center;
+}
+#coolButton {
+  background-color:pink;
+}

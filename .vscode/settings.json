@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "cs50.h": "c",
+        "string.h": "c",
+        "stdio.h": "c"
+    },
+    "gitdoc.enabled": true
+}

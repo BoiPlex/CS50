@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function multipleChoiceButton(e)
+            {
+                let button = e.srcElement;
+                let feedback = document.getElementById("feedback1");
+                let color;
+                let text;
+
+                // Check answer
+                if (button.innerHTML == "Mirror")
+                {
+                    color = "green";
+                    text = "Correct!";
+                }
+                else
+                {
+                    color = "red";
+                    text = "Incorrect";
+                }
+
+                // Output
+                button.style.backgroundColor = color;
+                feedback.innerText = text;
+            }
+
+            function freeResponseButton(e)
+            {
+                let textbox = document.getElementById("input");
+                let feedback = document.getElementById("feedback2");
+                let color;
+                let text;
+
+                // Check answer
+                if (textbox.value.toLowerCase() == "javascript")
+                {
+                    color = "green";
+                    text = "Correct!";
+                }
+                else
+                {
+                    color = "red";
+                    text = "Incorrect";
+                }
+
+                // Output
+                textbox.style.backgroundColor = color;
+                feedback.innerText = text;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>I don't speak, I cannot hear, but I always tell the truth. What am I?</h3>
+                <h4 id="feedback1"></h4>
+                <button onclick="multipleChoiceButton(event)">Fish</button>
+                <button onclick="multipleChoiceButton(event)">Watch</button>
+                <button onclick="multipleChoiceButton(event)">Mirror</button>
+                <button onclick="multipleChoiceButton(event)">Old Granny</button>
+                <button onclick="multipleChoiceButton(event)">Tree</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which programming language makes all buttons on this page work?</h3>
+                <h4 id="feedback2"></h4>
+                <input id="input" type="text">
+                <button onclick="freeResponseButton(event)">Check Answer</button>
+            </div>
+        </div>
+    </body>
+</html>
